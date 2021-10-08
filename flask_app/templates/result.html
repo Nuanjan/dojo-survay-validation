@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Dojo Survey</title>
+  </head>
+  <body>
+    {%block card%}
+    <div class="card bg-dark w-50 mx-auto mt-5" style="width: 18rem">
+      <div class="card-body">
+        <h1 class="card-title text-primary">{{one_survey.name}}</h1>
+        <p class="card-text text-white">
+          Dojo Location: <span>{{one_survey.location}}</span>
+        </p>
+        <p class="card-text text-white">
+          Favorite Language: <span>{{one_survey.language}}</span>
+        </p>
+        <p class="card-text text-white">
+          Comments: <span>{{one_survey.comment}}</span>
+        </p>
+
+        <a href="/all_surveys" class="card-link">Show All Surveys</a>
+        <a href="/" class="card-link">Home</a>
+      </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>

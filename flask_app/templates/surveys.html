@@ -1,0 +1,23 @@
+{%extends 'result.html'%}{%block card%} {%for survey in all_surveys %}
+<div class="card bg-dark w-50 mx-auto mt-5" style="width: 18rem">
+  <div class="card-body">
+    <h1 class="card-title text-primary">{{survey.name}}</h1>
+    <p class="card-text text-white">
+      Dojo Location: <span>{{survey.location}}</span>
+    </p>
+    <p class="card-text text-white">
+      Favorite Language: <span>{{survey.language}}</span>
+    </p>
+    <p class="card-text text-white">
+      Comments: <span>{{survey.comment}}</span>
+    </p>
+  </div>
+</div>
+{% endfor%}
+<a
+  class="btn btn-info rounded-pill m-3 position-fixed bottom-0 right-0"
+  href="/"
+  class="card-link"
+  >Home</a
+>
+{% endblock %}
